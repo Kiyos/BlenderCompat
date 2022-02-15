@@ -1,5 +1,5 @@
 # BlenderCompat
-Windows 7 support for Blender 3.0
+Windows 7 support for Blender 3.0.x
 
 ## Description
 
@@ -14,7 +14,16 @@ More recent builds, including pre-release versions, are provided by Loriem: http
 ## Building Blender for Windows 7
 
 Build Blender following these instructions: https://wiki.blender.org/wiki/Building_Blender/Windows with a small change.
-Before running `make update`, copy `bcompat7.patch` into the blender source tree and run `git apply bcompat7.patch` (there will be some warnings about whitespace, they can be ignored) then continue with the guide.
+Before running `make update`, copy `bcompat7.patch` into the blender source tree and run `git apply bcompat7.patch` then continue with the guide, i.e.:
+
+* Open up Developer Command Prompt for VS 2019
+* `cd %USERPROFILE%\Documents`
+* `git clone git://git.blender.org/blender.git`
+* `cd blender`
+* `curl -O https://raw.githubusercontent.com/Kiyos/BlenderCompat/master/bcompat7.patch`
+* `git apply bcompat7.patch`
+* `make update`
+* `make`
 
 To use the your own build of this compatibility DLL, overwrite the files in the `lib/win64_vc15/bcompat7` directory created after running `make update`.
 
