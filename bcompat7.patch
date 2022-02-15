@@ -23,7 +23,7 @@ index c495ee6eee9..ee875ec876b 100644
  			)
 +
 +:RETRYBCOMPAT
-+			"%SVN%" checkout https://github.com/nalexandru/BlenderCompat/trunk/bin %BUILD_VS_LIBDIR%/bcompat7
++			"%SVN%" checkout https://github.com/Kiyos/BlenderCompat/trunk/bin %BUILD_VS_LIBDIR%/bcompat7
 +			if errorlevel 1 (
 +				set /p LibRetry= "Error during download, retry? y/n"
 +				if /I "!LibRetry!"=="Y" (
