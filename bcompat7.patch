@@ -21,19 +21,19 @@ index c495ee6eee9..ee875ec876b 100644
  				echo.
  				exit /b 1
  			)
-+			
++
 +:RETRYBCOMPAT
 +			"%SVN%" checkout https://github.com/nalexandru/BlenderCompat/trunk/bin %BUILD_VS_LIBDIR%/bcompat7
 +			if errorlevel 1 (
 +				set /p LibRetry= "Error during download, retry? y/n"
 +				if /I "!LibRetry!"=="Y" (
 +					cd %BUILD_VS_LIBDIR%
-+					"%SVN%" cleanup 
++					"%SVN%" cleanup
 +					cd %BLENDER_DIR%
 +					goto RETRYBCOMPAT
 +				)
 +				echo.
-+				echo Error: Download of external libraries failed. 
++				echo Error: Download of external libraries failed.
 +				echo This is needed for building, please manually run 'svn cleanup' and 'svn update' in
 +				echo %BUILD_VS_LIBDIR% , until this is resolved you CANNOT make a successful blender build
 +				echo.
