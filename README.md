@@ -18,6 +18,7 @@ Before running `make update`, copy `bcompat7.patch` into the blender source tree
 
 * Open up Developer Command Prompt for VS 2019
 * `cd %USERPROFILE%\Documents`
+* `md blender-build && cd blender-build`
 * `git clone git://git.blender.org/blender.git`
 * `cd blender`
 * `curl -O https://raw.githubusercontent.com/Kiyos/BlenderCompat/master/bcompat7.patch`
